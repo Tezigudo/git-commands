@@ -135,20 +135,37 @@ test/
 
 ## Undo Changes and Recover Files
 
-> TODO: enter the git command to do each of these
-
 1.  Display the differences between your *working copy* of `a.py` and the `a.py` in the *local repository* (HEAD revision):
+
+    ```
+    git diff a.py
+    ```
 
 2. Display the differences between your *working copy* of `a.py` and the version in the *staging area*. (But, if a.py is not in the staging area this will compare working copy to HEAD revision):
 
+   ```
+   git diff --cached a.py
+   ```
+
 3. **View changes to be committed:** Display the differences between files in the staging area and the versions in the repository. (You can also specify a file name to compare just one file.) 
+
+   ```
+   git diff --staged filename(optional)
+   ```
 
 
 4. **Undo "git add":** If `main.py` has been added to the staging area (`git add main.py`), remove it from the staging area:
 
+   ```
+   git restore --staged main.py
+   ```
+
 
 5. **Recover a file:** Command to replace your working copy of `a.py` with the most recent (HEAD) version in the repository.  This also works if you have deleted your working copy of this file.
 
+   ```
+   git restore a.py
+   ```
 
 6. **Undo a commit:** Suppose you want to discard some commit(s) and move both HEAD and "master" to an earlier revision (an earlier commit)  Suppose the git commit graph looks like this (`aaaa`, etc, are the commit ids)
    ```
@@ -156,10 +173,15 @@ test/
    ``` 
    The command to reset HEAD and master to the commit id `bbbb`:
 
+   ```
+   git reset --hard bbbb
+   ```
+
 
 7. **Checkout old code:** Using the above example, the command to replace your working copy with the files from commit with id `aaaa`:
+
    ```
-   todo your answer here
+   git checkout aaaa
    ```
     Note:
     - Git won't let you do this if you have uncommitted changes to any "tracked" files.
@@ -169,17 +191,23 @@ test/
 ## Viewing Commits
 
 1. Show the history of commits, using one line per commit:
+
    ```
    git log --oneline
    ```
+
    Some versions of git have an *alias* "log1" for this (`git log1`).
 
 2. Show the history (as above) including *all* branches in the repository and include a graph connecting the commits:
 
+   ```
+   git log --graph
+   ```
+
 
 3. List all the files in the current branch of the repository:
    ```
-   todo your answer
+   git ls-files
    ```
    example output:
    ```
@@ -194,8 +222,11 @@ test/
 
 ## Branch and Merge
 
-> TODO write the commands to do each of these
 1. Create a new branch named `dev-foo`:
+
+   ```
+   git branch dev-foo
+   ```
  
 2. Display the name of your current branch:
 

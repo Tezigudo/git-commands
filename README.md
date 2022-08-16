@@ -1,26 +1,10 @@
-> **Instructions**
-> 
-> 1. Read Chapters 2 & 3 of [Pro Git][ProGit]. The chapters are short.
-> 2. Answer these questions using [Markdown format][markdown-cheatsheet] (also [Github Markdown][github-markdown]). 
-> 3. Place your answers between lines beginning with 3 backquotes, which tells Markdown it should be unformatted text, and write only the commands you would type (**no** shell prompt).
->    Indent the 3 backquotes so they line up with the question text (3 leading spaces) so Markdown formats you answer as part of the numbered item.
->    Example:
->    ```
->    git init
->    ```  
-> 4. **Test that your answers are correct!** There is **no excuse** for incorrect answers since you can test your answers by experimentation.      
-> 5. **Delete these instructions and all "TODO" lines.** Points deducted for each "TODO" in submitted work.   
-> 6. Verify that your Markdown formatting is correct -- points deducted for bad formatting. VS Code and IntelliJ have markdown previewers. You should also preview it on Github, since Github Markdown is a bit non-standard.
->   *Excellent VS Code Markdown Previewer*: the [Markdown Preview Enhanced][vscode-markdown-preview-enhanced] extension.
-
 ## Using Git
-
-### Table of content:
 
 [Basics](#basics)    
 [Adding and Changing Things](#adding-and-changing-things)    
-[Next Section (todo: Fix This)](#next-section)    
-[Next Section (todo: Fix This)](#next-next-section)    
+[Undo Changes and Recover Files](#undo-changes-and-recover-files)    
+[Viewing Commits](#viewing-commits)    
+[Branch and Merge](#branch-and-merge)  
 [Commands for Remotes](remote-commands.md)   
 [Favorites](#favorites)     
 [Resources](#resources)
@@ -271,17 +255,15 @@ test/
    ```
 
 
-
 ## Favorites
 
-> TODO: Add *at least* 1 git task that (a) that you'd like to remember, or (b) you think is really useful, and the git command(s) to do it.
-
-
+My favourites command is `git checkout` or `git switch` in new version. this command will switch all file in the choosen branch to working copy and switching head to choosing branch.  
 
 ---
 ## Resources
 
-> TODO: Add your favorite Git resources (at least 1)
+#### Favourite git resourcess
+- my favourite git resources is [Pro Git Online Book][ProGit] and [Git Visualizer][VisualizeGit]
 
 [Pro Git Online Book][ProGit] Chapters 2 & 3 contain the essentials. Downloadable PDF is also available.     
 [Visual Git Reference](https://marklodato.github.io/visual-git-guide) one page with illustrations of git commands.

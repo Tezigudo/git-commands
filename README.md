@@ -230,24 +230,45 @@ test/
  
 2. Display the name of your current branch:
 
+   ```
+   git status -b
+   ```
+
 3. List the names of **all** branches, including remote branches:
 
+   ```
+   git branch -r
+   ```
+
 4. Switch your working copy to the branch named `dev-foo`:
+ - **Soln1**
+   ```
+   git checkout dev-foo 
+   ```
+ - **Soln2**
+   ```
+   git switch dev-foo
+   ```
 
 5. **Merge:** To merge the work from `dev-foo` into the master branch, perform these steps:
-   > TODO: write a description of the steps and the git command(s) for each step
+
    1. step one
       ```
-      git do something
+      git switch master
       ```
    2. step two
       ```
-      git do something else
+      git merge dev-foo
       ```
 
 
 6. Describe under what conditions a merge may fail.
 
+
+   ```
+   merge fail come from merge conflict that mean same file between 2 branches
+   have been edited the same part, So git won't merge cleanly. 
+   ```
 
 
 

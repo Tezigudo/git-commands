@@ -1,18 +1,14 @@
 ## Commands for Remotes
 
-> TODO Write your answers and then remove **all** the TODO comments
-> TODO For answers that are git or shell commands, surround your answer in triple backquotes, like this:
-   ```
-   this is unformatted text
-   delete this example
-   ```
-
 1. List all your remote repositories and show their URLs:
    ```
-   TODO write the git command for this
+   git remote -v
    ```
 
 2. View details about a remote repo named `origin`, including all the remote branches and local tracking branches for `origin`:
+   ```
+   git remote show origin
+   ```
 
 
 3. (Pushing a new branch) You commit some files to the `dev-foo` branch and try to "push" them to Github, but it fails as shown here:
@@ -23,12 +19,20 @@
    fatal:  The current branch dev-foo has no upstream branch. 
    ```
    Explain this error.
-   > TODO Since you are writing an explanation (not shell commands), write your answer in lines beginning with `>` like this one. The text will be formatted and may include Markdown.
+   > because this branches(`dev-fool`) branches doesnt tracking upstream or doesnt have any remote for it yet.
 
 
 4. The command to push `dev-foo` to `origin` as a **new remote branch** on `origin` is:
 
+   ```
+   git push origin dev-foo
+   ```
 
+   or
+
+   ```
+   git push --set-upstream origin dev-foo
+   ```
 
 5. (Create a local tracking branch for a remote branch) The remote repository (`origin`) has a branch named `e2e-test` that you don't have in your local repository.   
    The command to create a new local branch as a copy of the remote `e2e-test` branch that **tracks** the remote branch is:
@@ -66,6 +70,6 @@
    - Note: you must **create** an empty repo on Bitbucket. This command just adds it as a remote, it won't create the remote repo.
 
 
-9. After adding the remote named `bitbucket`, the command to push your master branch to `bitbucket` is:
+9.  After adding the remote named `bitbucket`, the command to push your master branch to `bitbucket` is:
 
 
